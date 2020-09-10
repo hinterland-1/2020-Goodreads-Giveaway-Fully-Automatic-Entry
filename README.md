@@ -1,3 +1,6 @@
+# 2020 Update
+Since ebook lotteries have been added the original script no longer worked so I changed the giveaway url to exclude ebook lotteries. 
+
 # goodreads-giveaways
 Auto enter giveaways in Goodreads.
 
