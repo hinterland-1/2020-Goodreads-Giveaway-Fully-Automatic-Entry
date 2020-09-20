@@ -35,6 +35,9 @@ def scrape_giveaways(session):
 		if not lis: break
 
 		for li in lis:
+			timeDelay = random.uniform(0.1, 0.5)
+			time.sleep(timeDelay)
+			print(timeDelay, "Seconds Delay")
 			ID = int(li.xpath('.//a[@class="actionLink detailsLink"]/@href')[0].rsplit('/', 1)[-1].split('-')[0])
 			entered = not bool(li.xpath('.//a[@class="gr-button"]/@href'))
 			giveaway = {
@@ -89,6 +92,9 @@ def main():
 
 	for giveaway in giveaways:
 		if not giveaway['Entered']:
+			timeDelay = random.uniform(0.1, 0.5)
+			time.sleep(timeDelay)
+			print(timeDelay, "Seconds Delay")
 			enter_giveaway(session, giveaway['ID'])
 			print('[*] Entered giveaway for: {0} - {1}'.format(giveaway['Name'], giveaway['ID']))
 
